@@ -43,11 +43,13 @@ mark {
 }
 
 .float-left {
-    float: left;
+    /*float: left;*/
+    float: none;
 }
 
 .float-right {
-    float: right;
+    /*float: right;*/
+    float: none;
 }
 
 .clear-fix:after {
@@ -102,7 +104,7 @@ h5, h6 {
     background-color: #efeeef;
     clear: both;
     padding-bottom: 20px;
-    border-top: 1px solid #e2a3a3;
+    /*border-top: 1px solid #e2a3a3;*/
 }
 
     .main-content {
@@ -152,7 +154,7 @@ footer {
     display: block;
     font-size: .85em;
     margin: 0 0 10px;
-    text-align: right;
+    text-align: center; /*right;*/
 }
 /*
     #login a {
@@ -170,21 +172,24 @@ footer {
     }
 
     #login ul {
-        margin: 0;
+        margin: 5px 0;
+        padding: 0;
     }
 
     #login li {
         display: inline;
         list-style: none;
+        margin: 0;
+        padding: 0 5px 0 5px;
     }
 /* Language Buttons */
 #login a {
 	display: inline-block;
-	padding: 4px 8px 5px 8px;
+	padding: 2px 6px 3px 6px;
 	color: #e2a3a3;
 	border: 1px solid #e2a3a3;
 	text-decoration: none;
-	font-size: 12px;
+	font-size: 11px;
 	background-color: rgba(255,255,255, 0);
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -208,18 +213,18 @@ ul#menu {
     font-weight: 600;
     margin: 0 0 5px;
     padding: 0;
-    text-align: right;
+    text-align: center; /*right;*/
 }
 
     ul#menu li {
         display: inline;
         list-style: none;
-        padding-left: 15px;
+        padding: 0 10px 0 10px;
     }
 
         ul#menu li a {
             background: none;
-            color: #e2a3a3 /*#999*/;
+            color: #db8e8e /*#999*/;
             text-decoration: none;
         }
 
@@ -534,35 +539,29 @@ table {
     margin-top: 0.75em;
     border: 0 none;
 }
-
 th {
 	font-size: 1.2em;
     text-align: left;
     border: none 0px;
     padding-left: 0;
 }
-
     th a {
         display: block;
         position: relative;
         
     }
-
 	th a:link, th a:visited, th a:active, th a:hover {
 		color: #333;
 		font-weight: 600;
 		text-decoration: none;
         padding: 0;
 	}
-
 	th a:hover {
 		color: #000;
 	}
-
     th.asc a, th.desc a {
         margin-right: .75em;
     }
-    
     th.asc a:after, th.desc a:after {
 		display: block;
         position: absolute;
@@ -570,40 +569,38 @@ th {
         top: 0;
         font-size: 0.75em;
 	}
-
 	th.asc a:after {
 		content: '▲';
 	}
-
 	th.desc a:after {
 		content: '▼';
 	}
-
 td {
     padding: 0.25em 2em 0.25em 0em;
     border: 0 none;
     /*vertical-align: top;*/
 }
-
 tr.pager td {
     padding: 0 0.25em 0 0;
 }
 
-/* Added 16FEB21 */
+/******************
+***  YuanJuLou  ***
+******************/
+/* Menu Color: #db8e8e (219 142 142); Menu Color Hover: #c20c0c (194 12 12); Title with horizonal line color:  ; Text color:  ; */
+/* image buttons */
 a.imgLink:hover{
     /*pointer-events: none;*/
     background-color: #f0f0f0;
 }
-
 a img.thumbnail {
     border: 1px solid #C0C0C0;
     padding: 3px;
 }
-
 a img:hover {
     box-shadow: 4px 3px 8px #8B0000;
 }
-
+/* Menu tables */
 table.menuTable{
     width: 98%;
 }
@@ -627,14 +624,113 @@ td.colName{
 td.colPrice{
     text-align: right;
 }
+/* Photo display on main page */
 #photoShow{
     border: 1px, solid, #e2a3a3;
     float: left;
 }
 table.menuSets{
-    width: 98%;
+    width: 100%;
     text-align: center;
 }
+/* Introduction text on main page */
+
+/* Title with horizontal line */
+h2.hrTitle {
+	display: flex;
+	flex-basis: 100%;
+	align-items: center;
+	color: rgba(210, 157, 60, 0.95);
+	margin: 8px 0px;
+}
+h2.hrTitle::before,
+h2.hrTitle::after {
+	content: "";
+	flex-grow: 1;
+	background: rgba(210, 157, 60, 0.95);
+	height: 1px;
+	font-size: 0px;
+	line-height: 0px;
+	margin: 0px 8px;
+}	
+h3.hrTitle {
+	display: flex;
+	flex-basis: 100%;
+	align-items: center;
+	color: rgba(219, 142, 142, 0.95);
+	margin: 8px 0px;
+}
+h3.hrTitle::before,
+h3.hrTitle::after {
+	content: "";
+	flex-grow: 1;
+	background: rgba(219, 142, 142, 0.95);
+	height: 1px;
+	font-size: 0px;
+	line-height: 0px;
+	margin: 0px 8px;
+}
+.titlePos{
+    text-align: center;
+}
+/* Contact page */
+.divContact, .divIntro {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.875em;
+    color: #d29d3c;
+    width: 100%;
+}
+.divContact .divCol2 {
+    width: 80px;  
+    float: left;
+}
+.divContact .divCols {
+    width: 240px; 
+    float: left;
+}
+.divContact ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+.divContact li {
+    margin-top: 3px;
+}
+.divContact h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.25em;
+    color: #d29d3c;
+}
+.divContact li a {
+    color: #d29d3c;
+}
+.divContact li a:hover {
+    color: #c20c0c;
+    background-color: rgba(255, 255, 255, 0); 
+}
+
+/* embeded google map */
+.mapOutline {
+    position: relative;
+    text-align: right;
+    height: 312px;
+    width: 462px;
+    padding: 4px;
+    background-color:#fff; 
+    -webkit-border-radius: 10px; 
+    -moz-border-radius: 10px; 
+    border-radius: 10px; 
+    -webkit-box-shadow: 0px 10px 15px 0px rgba(50, 50, 50, 0.5); 
+    -moz-box-shadow: 0px 10px 15px 0px rgba(50, 50, 50, 0.5); 
+    box-shadow: 0px 10px 15px 0px rgba(50, 50, 50, 0.5);
+}
+.mapPaint {
+    overflow: hidden;
+    background: none !important;
+    height: 300px;
+    width: 450px;
+    padding:4px; 
+}
+
 
 /********************
 *   Mobile Styles   *
@@ -650,7 +746,7 @@ table.menuSets{
 
     /* logo */
     header .site-title {
-        margin: 10px;
+        margin: 0px;
         text-align: center;
     }
 
@@ -670,7 +766,7 @@ table.menuSets{
             display: inline;
             list-style: none;
             margin: 0;
-            padding: 0;
+            padding: 0 5px 0 5px;
         }
 /*
         #login a {
@@ -697,8 +793,10 @@ table.menuSets{
     }
 
         ul#menu li {
+            display: inline;
+            list-style: none;
             margin: 0;
-            padding: 0;
+            padding: 0 2px 0 2px;
         }
 
 
